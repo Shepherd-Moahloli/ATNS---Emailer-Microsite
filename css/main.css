@@ -24,31 +24,6 @@ img {
 .btn.cta {
   transition: box-shadow 0.2s, transform 0.2s;
 }
-
-@media only screen and (max-width: 620px) {
-  .container {
-    width: 100% !important;
-  }
-  .p-24 {
-    padding: 20px !important;
-  }
-  .h1 {
-    font-size: 28px !important;
-    line-height: 34px !important;
-  }
-  .h2 {
-    font-size: 18px !important;
-    line-height: 24px !important;
-  }
-  .cta {
-    width: 100% !important;
-  }
-  .stack {
-    display: block !important;
-    width: 100% !important;
-  }
-}
-/* Dark mode helpers */
 @media (prefers-color-scheme: dark) {
   body {
     background: #0d1f3a !important;
@@ -57,20 +32,97 @@ img {
   .card {
     background: #0f2b55 !important;
   }
-  .btn {
+  .btn.cta {
     background: #ffffff !important;
     color: #0f2b55 !important;
   }
 }
-/* Utilities */
-.bg {
-  background-color: #fff;
-}
-.card {
-  background: #0b3162;
-  border-radius: 14px;
-}
-a {
-  color: #02b4ee;
-  text-decoration: none;
+
+/* ====== MOBILE LAYOUT (<=620px) ====== */
+@media only screen and (max-width: 620px) {
+  /* Container + padding */
+  .container {
+    width: 100% !important;
+  }
+  tr {
+    display: flex !important;
+    width: 100% !important;
+  }
+
+  .p-24 {
+    width: 100% !important;
+  } /* was 24 → 16 for tighter mobile */
+
+  /* Typography scale */
+  .h1 {
+    font-size: 26px !important;
+    line-height: 32px !important;
+    margin: 0 0 8px !important;
+  }
+  .h2 {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    margin: 0 0 16px !important;
+  }
+  .small {
+    font-size: 13px !important;
+    line-height: 18px !important;
+  }
+
+  /* Columns stack */
+  .stack {
+    display: block !important;
+    width: 100% !important;
+  }
+  .center-mobile {
+    text-align: center !important;
+  } /* use on TDs that should center on mobile */
+
+  /* Images responsive */
+  .fluid-img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+  .logo-img {
+    width: 120px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  } /* center logo */
+
+  /* Course rows */
+  .row-80 {
+    width: 100% !important;
+  } /* your 80% row becomes full width on mobile */
+  .row-pad {
+    padding: 10px 0 12px !important;
+  } /* consistent vertical rhythm */
+  .rule {
+    border-color: #08448c !important;
+  } /* keep your brand blue on mobile */
+
+  /* CTA tap target */
+  .cta {
+    display: block !important;
+    width: 35% !important;
+    text-align: center !important;
+  }
+  .cta-wrap {
+    padding: 16px 0 24px !important;
+  } /* space around the button */
+
+  /* Footer/info block */
+  .footer-pad {
+    padding: 12px 16px 24px !important;
+  }
+  .hide-mobile {
+    display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  .show-mobile {
+    display: block !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
 }
